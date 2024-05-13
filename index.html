@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <h1 class="logo"><span>H</span>emalatha.</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hi, I'm <span>Hemalatha.k</span><br>From Coimbatore</h1>
+        </div>
+    </div>
+</div>
+<!-------------about------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="a.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle"> About Me</h1>
+                <p>Hola Soy, un apasionado con experiencia en Áreas de Especialización. Me encanta. Con un enfoque en, me esfuerzo por. Estoy emocionado de compartir mi trabajo contigo. 
+                    Gracias por visitar mi portfolio!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                        <li><span>Web Development</span><br>web app Development</li>
+                        <li><span>App Development</span><br>Building Android/ios apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021-current</span><br>UI/UX design Training at ET institute </li>
+                        <li><span>2019-1021</span><br>team lead at starApp LLC</li>
+                        <li><span>2017-2019</span><br>Intership at ekart Ecommerce.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br>UI/UX design Training at ET institute</li>
+                        <li><span>2016</span><br>MBA from mit bangalore</li>
+                        <li><span>2016-1017</span><br>Bba from ism bangalore</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
